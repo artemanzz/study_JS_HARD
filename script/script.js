@@ -22,11 +22,15 @@ switch (lang) {
 }
 
 let week = [
-  ['ru', 'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье'],
-  ['eng', 'Monday, tuesday, wednesday, thursday, friday, saturday, sunday']
+  ['ru', 'eng'],
+  ['Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье', 'Monday, tuesday, wednesday, thursday, friday, saturday, sunday']
 ];
 
-lang === week[0][0] ? console.log(week[0][1]) : lang === week[1][0] ? console.log(week[1][1]) : console.log('Incorrect language'); 
+lang === week[0][0] ? console.log(week[1][0]) : lang === week[0][1] ? console.log(week[1][1]) : console.log('Incorrect language');
 
+//Альтернативный вариант
+console.log(week[1][week[0].indexOf(lang)]);
+
+// 2й пункт задания
 let namePerson = prompt('Введите имя (Артём или Максим): ', 'Артём');
 console.log(namePerson === 'Артём' ? 'директор' : namePerson === 'Максим' ? 'преподаватель' : 'студент');
