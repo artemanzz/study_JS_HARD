@@ -1,7 +1,7 @@
 'use strict';
 
 let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
-let date = new Date();
+let date = new Date(2021, 1, 5);
 
 for (let i = 0; i < week.length; i++) {
   if (i === (date.getDay() - 1)) {
